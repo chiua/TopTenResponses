@@ -1,0 +1,10 @@
+{
+  "name": "Top_Ten_Request_Logs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "node": "^0.0.0"
+  }
+}
