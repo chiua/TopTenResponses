@@ -3,6 +3,7 @@
 Instructions
 
 Enter in the commandline
-node index.js [logfile.log]
 
+NPM Install
 
+node index.js [logfile.log] (ex. node index.js test.log)
