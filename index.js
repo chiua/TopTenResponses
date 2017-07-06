@@ -1,4 +1,4 @@
-var fs = require('fs');
+const fs = require('fs');
 
 let log = process.argv[2];
 if (log && log.endsWith('.log')){
@@ -14,16 +14,16 @@ if (log && log.endsWith('.log')){
   process.exit();
 }
 
-var array = fs.readFileSync(log).toString().split("\n");
+const array = fs.readFileSync(log).toString().split("\n");
 const map = new Map();
 
 //filter the data
 for(i in array) {
-  var response = array[i].split(' ');
-  var is200 = parseInt(response[5]) === 200;
-  var request_item = response[3];
-  var bytes = parseInt(response[6]);
-  var isGet = response[2] && response[2].indexOf('GET') > 0;
+  let response = array[i].split(' ');
+  let is200 = parseInt(response[5]) === 200;
+  let request_item = response[3];
+  let bytes = parseInt(response[6]);
+  let isGet = response[2] && response[2].indexOf('GET') > 0;
 
   if ( isGet && is200){
     const object = map.get(request_item);
